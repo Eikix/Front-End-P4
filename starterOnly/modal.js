@@ -25,3 +25,5 @@ function launchModal() {
 function closeModal() {
     modalbg.style.display = 'none';
 }
+
+// Validate function
