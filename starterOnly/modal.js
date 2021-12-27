@@ -34,6 +34,6 @@ form.onsubmit = success;
 function success(event) {
     event.preventDefault();
     modalbg.style.display = 'none';
-    successModalBg.style.display = 'block';
+    successModalBg.style.display = 'flex';
     setTimeout(() => (successModalBg.style.display = 'none'), 5000);
 }
