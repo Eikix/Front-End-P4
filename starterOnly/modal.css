@@ -14,7 +14,6 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-image: url('background.png');
     font-family: var(--font-default);
     font-size: 18px;
     max-width: 1300px;
@@ -139,6 +138,24 @@ main {
     font-family: var(--font-slab);
 }
 
+/* Modal post-submit Success Message */
+.success {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: fixed;
+    z-index: 10;
+    left: 40%;
+    top: 50%;
+    height: 15vh;
+    width: 50vw;
+    max-width: 30rem;
+    color: white;
+    background-color: rgba(26, 156, 106, 0.9);
+}
+
 /* Modal form */
 
 .button {
@@ -238,11 +255,19 @@ input[data-error]::after {
 .checkbox-label,
 .checkbox2-label {
     position: relative;
-    margin-left: 36px;
+    /* margin-left: 36px; */
     font-size: 12px;
     font-weight: normal;
+    transform: translateY(-0.3rem);
 }
-.checkbox-label .checkbox-icon,
+
+input {
+    accent-color: #279e7a;
+}
+
+/* This is the code originally put forth by OpenClassrooms for me to change and adapt. I judged it to be replaceable by the above property, accent-color, and commented it out. */
+
+/* .checkbox-label .checkbox-icon,
 .checkbox2-label .checkbox-icon {
     display: block;
     width: 20px;
@@ -255,8 +280,8 @@ input[data-error]::after {
     left: -30px;
     top: -1px;
     transition: 0.3s;
-}
-.checkbox-label .checkbox-icon::after,
+} */
+/* .checkbox-label .checkbox-icon::after,
 .checkbox2-label .checkbox-icon::after {
     content: '';
     width: 13px;
@@ -271,9 +296,15 @@ input[data-error]::after {
     transform: translate(-50%, -50%);
     transition: 0.3s;
     opacity: 0;
-}
+} */
+
 .checkbox-input {
-    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #279e7a;
+    border-radius: 50%;
+    white-space: nowrap;
+    transition: 0.3s;
 }
 .checkbox-input:checked + .checkbox-label .checkbox-icon::after,
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
