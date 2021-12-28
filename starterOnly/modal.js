@@ -30,10 +30,19 @@ function closeModal() {
 }
 
 form.onsubmit = success;
+const myFormValues = {};
 // This function is called when the form is submitted. Using only HTML5 attributes to pre-validate the form, if the form is allowed to submit, it is already valid as per our standards. This means that the function called by submit isn't really validating anything, but rather confirms our success.
 function success(event) {
     event.preventDefault();
+    myFormValues.first = event.target.elements.first.value;
+    myFormValues.last = event.target.elements.last.value;
+    myFormValues.email = event.target.elements.email.value;
+    myFormValues.quantity = event.target.elements.quantity.value;
+    myFormValues.location = event.target.elements.location.value;
+    myFormValues.checkbox1 = event.target.elements.checkbox1.value;
+    myFormValues.checkbox2 = event.target.elements.checkbox2.value;
     modalbg.style.display = 'none';
     successModalBg.style.display = 'flex';
     setTimeout(() => (successModalBg.style.display = 'none'), 5000);
+    console.log(myFormValues);
 }
