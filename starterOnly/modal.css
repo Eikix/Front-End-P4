@@ -151,12 +151,12 @@ main {
     border-radius: 0.5rem;
     position: fixed;
     z-index: 10;
-    height: 50vh;
-    width: 50vw;
-    max-height: 15rem;
-    max-width: 30rem;
+    min-height: 70vh;
+    min-width: 80vw;
+    max-height: 50rem;
+    max-width: 50rem;
     color: white;
-    background-color: rgba(26, 156, 106, 0.9);
+    background-color: #232323;
 }
 
 /* Modal form */
